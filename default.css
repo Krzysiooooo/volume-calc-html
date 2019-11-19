@@ -1,0 +1,18 @@
+.menu {
+    list-style: none;
+    clear: both;
+}
+
+.menu li {
+    float: left;
+    text-align: center;
+}
+
+.menu li img {
+    height: 200px;
+}
+
+.calculator{
+    clear: both;
+    display: none;
+}
