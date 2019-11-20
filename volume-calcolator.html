@@ -24,6 +24,10 @@
                     <img src="../images/stozek.png">
                     <button data-figure="stozek">Stożek</button>
                 </li>
+                <li>
+                    <img src="../images/prostopadloscian.png" height="317" width="236"/>
+                    <button data-figure="prostopadloscian">Prostopadłościan</button>
+                </li>
             </ul>
             <div class="calculator">
                 <h2 id="selected-figure"></h2>
@@ -34,6 +38,10 @@
                 <div>
                     <p>Wysokosc</p>
                     <input id="input-h">
+                </div>
+                <div>
+                    <p>...</p>
+                    <input id = "input-a">
                 </div>
                 <button id="calc">Policz</button>
                 <div>
@@ -54,7 +62,11 @@
                 },
                 stozek: (input) => {
                     return 1 / 3 * Math.PI * Math.pow(input.r, 2) * input.h
+                },
+                prostopadloscian: (input) => {
+                    return input.r * input.h * input.a
                 }
+
             };
 
             var activeFigure = {
@@ -72,7 +84,8 @@
             document.querySelector("#calc").addEventListener("click", () => {
                 const input = {
                     r: parseInt(document.querySelector("#input-r").value),
-                    h: parseInt(document.querySelector("#input-h").value)
+                    h: parseInt(document.querySelector("#input-h").value),
+                    a: parseInt(document.querySelector("#input-a").value)
                 };
                 const fieldFn = calcFieldMap[activeFigure.name];
                 activeFigure.input = input;
@@ -80,6 +93,7 @@
                 document.querySelector("#selected-figure-field").innerText = activeFigure.field;
                 document.querySelector("#input-r").value = '';
                 document.querySelector("#input-h").value = '';
+                document.querySelector("#input-a").value = '';
             });
 
             var buttons = document.querySelectorAll('.menu button');
