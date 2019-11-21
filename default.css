@@ -16,3 +16,10 @@
     clear: both;
     display: none;
 }
+
+.content, header{
+    width:50%;
+    background: lightgrey;
+    margin: auto;
+    padding: 20px;
+}
