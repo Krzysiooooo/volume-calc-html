@@ -23,7 +23,7 @@
     margin: auto;
     padding: 20px;
 }
-
-.figure-type{
-    display: none;
+.content{
+    min-height: 500px;
 }
+
