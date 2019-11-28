@@ -1,57 +1,87 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Kalkulator objętości</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="default.css">
-    </head>
-    <body>
-        <header>
-            <h1>KALKULATOR OBJETOSCI</h1>
-        </header>
-        <div class="content">
-            <h2>Wybierz figurę</h2>
-            <ul class="menu">
-                <li>
-                    <img src="images/walec.png">
-                    <button data-figure="walec">Walec</button>
-                </li>
-                <li>
-                    <img src="images/kula.png">
-                    <button data-figure="kula">Kula</button>
-                </li>
-                <li>
-                    <img src="images/stozek.png">
-                    <button data-figure="stozek">Stożek</button>
-                </li>
-                <li>
-                    <img src="images/prostopadloscian.png"/>
-                    <button data-figure="prostopadloscian">Prostopadłościan</button>
-                </li>
-            </ul>
-            <div class="calculator">
-                <h2 id="selected-figure"></h2>
+<head>
+    <title>Kalkulator objętości</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+<header>
+    <h1>KALKULATOR OBJETOSCI</h1>
+</header>
+<div class="content">
+    <h2>Wybierz figurę</h2>
+    <ul class="menu">
+        <li>
+            <img src="images/walec.png">
+            <button data-figure="walec">Walec</button>
+        </li>
+        <li>
+            <img src="images/kula.png">
+            <button data-figure="kula">Kula</button>
+        </li>
+        <li>
+            <img src="images/stozek.png">
+            <button data-figure="stozek">Stożek</button>
+        </li>
+        <li>
+            <img src="images/prostopadloscian.png"/>
+            <button data-figure="prostopadloscian">Prostopadłościan</button>
+        </li>
+    </ul>
+    <div class="calculator">
+        <h2 id="selected-figure"></h2>
+        <div class="selected-figure-data">
+            <div class="figure-type walec">
                 <div>
                     <p>Promień</p>
-                    <input id="input-r">
+                    <input class="input-r">
                 </div>
                 <div>
                     <p>Wysokosc</p>
-                    <input id="input-h">
+                    <input class="input-h">
+                </div>
+            </div>
+            <div class="figure-type kula">
+                <div>
+                    <p>Promień</p>
+                    <input class="input-r">
+                </div>
+            </div>
+            <div class="figure-type stozek">
+                <div>
+                    <p>Promień</p>
+                    <input class="input-r">
                 </div>
                 <div>
-                    <p>...</p>
-                    <input id="input-a">
+                    <p>Wysokosc</p>
+                    <input class="input-h">
                 </div>
-                <button id="calc">Policz</button>
+            </div>
+            <div class="figure-type prostopadloscian">
                 <div>
-                    <h2>Objętość wybranej figury wynosi:</h2>
-                    <p id="selected-figure-input"></p>
-                    <p id="selected-figure-field"></p>
+                    <p>Długość</p>
+                    <input class="input-a">
+                </div>
+                <div>
+                    <p>Szerokość</p>
+                    <input class="input-b">
+                </div>
+                <div>
+                    <p>Wysokość</p>
+                    <input class="input-c">
                 </div>
             </div>
         </div>
-        <footer></footer>
-        <script type="text/javascript" src="Main.js"></script>
-    </body>
+        <button id="calc">Policz</button>
+        <div>
+            <h2>Objętość wybranej figury wynosi:</h2>
+            <p id="selected-figure-input"></p>
+            <p id="selected-figure-field"></p>
+        </div>
+    </div>
+</div>
+<footer></footer>
+<script type="text/javascript" src="Main.js"></script>
+</body>
 </html>
