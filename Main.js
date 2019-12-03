@@ -35,7 +35,9 @@ function clickListener(event) {
     activeFigure.name = event.target.getAttribute('data-figure');
     document.querySelector("#selected-figure").innerHTML = activeFigure.name;
     document.querySelector(".calculator").style.display = "block";
-    document.querySelectorAll(".figure-type").forEach((item)=>{item.hidden = true});
+    document.querySelectorAll(".figure-type").forEach((item) => {
+        item.hidden = true
+    });
     document.querySelector("." + activeFigure.name).hidden = false;
 }
 
@@ -43,18 +45,20 @@ document.querySelector("#calc").addEventListener("click", () => {
     const formulaFn = calcFieldMap[activeFigure.name].formula;
     const inputs = calcFieldMap[activeFigure.name].inputs;
 
-    var input = {};
-    inputs.forEach((param)=>{
-        input[param] = parseInt(document.querySelector("."+activeFigure.name+" .input-"+param).value)
+    const data = {};
+    inputs.forEach(param => {
+        data[param] = parseInt(document.querySelector("." + activeFigure.name + " .input-" + param).value)
     });
 
-    activeFigure.input = input;
-    activeFigure.field = formulaFn(input);
-    //document.querySelector("#selected-figure-input").innerHTML = `Wprowadzone wymiary:<ul> <li>r = ${activeFigure.input.r}</li> <li>h = ${activeFigure.input.h}</li> <li>a = ${activeFigure.input.a}</li></ul>`;
+    activeFigure.input = data;
+    activeFigure.field = formulaFn(data);
+    const dataKeys = Object.keys(data);
+    const listItems = dataKeys.map(key => `<li>${key} = ${data[key]}</li>`);
+    document.querySelector("#selected-figure-input").innerHTML = `Wprowadzone wymiary:<ul>${listItems.join(" ")}</ul>`;
     document.querySelector("#selected-figure-field").innerText = activeFigure.field;
-    document.querySelector("#input-r").value = '';
-    document.querySelector("#input-h").value = '';
-    document.querySelector("#input-a").value = '';
+    inputs.forEach((param) => {
+        document.querySelector("." + activeFigure.name + " .input-" + param).value = '';
+    });
 });
 
 var buttons = document.querySelectorAll('.menu button');
