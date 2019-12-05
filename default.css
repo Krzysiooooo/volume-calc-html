@@ -1,3 +1,31 @@
+/* Global styles */
+body, p, li, button {
+    font-family: "Arial", sans-serif;
+    color: #333333;
+}
+
+input, button {
+    font-size: 18px;
+    padding: 6px;
+    margin: 4px;
+    border: 3px solid #9cc1cf;
+    background-color: #effaff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+/* default styles */
+
 .menu {
     list-style: none;
     clear: both;
@@ -6,10 +34,15 @@
 .menu li {
     float: left;
     text-align: center;
+    margin: 5px;
 }
 
 .menu li img {
     height: 200px;
+}
+
+.menu li img:hover {
+    cursor: pointer;
 }
 
 .calculator{
@@ -18,8 +51,8 @@
 }
 
 .content, header{
-    width:50%;
-    background: lightgrey;
+    width: 70%;
+    background: #f4f4f4;
     margin: auto;
     padding: 20px;
 }

@@ -31,7 +31,7 @@ var activeFigure = {
     field: 0
 };
 
-function clickListener(event) {
+function figureSelectionHandler(event) {
     activeFigure.name = event.target.getAttribute('data-figure');
     document.querySelector("#selected-figure").innerHTML = activeFigure.name;
     document.querySelector(".calculator").style.display = "block";
@@ -41,7 +41,8 @@ function clickListener(event) {
     document.querySelector("." + activeFigure.name).hidden = false;
 }
 
-document.querySelector("#calc").addEventListener("click", () => {
+function calculateHandler(event) {
+    event.preventDefault();
     const formulaFn = calcFieldMap[activeFigure.name].formula;
     const inputs = calcFieldMap[activeFigure.name].inputs;
 
@@ -59,9 +60,9 @@ document.querySelector("#calc").addEventListener("click", () => {
     inputs.forEach((param) => {
         document.querySelector("." + activeFigure.name + " .input-" + param).value = '';
     });
-});
+}
 
-var buttons = document.querySelectorAll('.menu button');
-buttons.forEach(function (button) {
-    button.addEventListener("click", clickListener)
-});
+document.querySelector("#calc").addEventListener("click", calculateHandler);
+
+const images = document.querySelectorAll('.menu>li>img');
+images.forEach(image => image.addEventListener("click", figureSelectionHandler));

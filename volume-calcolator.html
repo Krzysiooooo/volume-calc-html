@@ -13,41 +13,45 @@
     <h2>Wybierz figurę</h2>
     <ul class="menu">
         <li>
-            <img src="images/walec.png">
-            <button data-figure="walec">Walec</button>
+            <img data-figure="walec" src="images/walec.png">
         </li>
         <li>
-            <img src="images/kula.png">
-            <button data-figure="kula">Kula</button>
+            <img data-figure="kula" src="images/kula.png">
         </li>
         <li>
-            <img src="images/stozek.png">
-            <button data-figure="stozek">Stożek</button>
+            <img data-figure="stozek" src="images/stozek.png">
         </li>
         <li>
-            <img src="images/prostopadloscian.png"/>
-            <button data-figure="prostopadloscian">Prostopadłościan</button>
+            <img data-figure="prostopadloscian" src="images/prostopadloscian.png" title="Prostopadłościan"/>
         </li>
     </ul>
     <div class="calculator">
         <h2 id="selected-figure"></h2>
         <div class="selected-figure-data">
-            <div class="figure-type walec">
-                <div>
-                    <p>Promień</p>
-                    <input class="input-r">
+            <form onsubmit="calculateHandler">
+                <div class="figure-type walec">
+                    <div>
+                        <p>Promień</p>
+                        <input class="input-r" type="number" min="0" required>
+                    </div>
+                    <div>
+                        <p>Wysokosc</p>
+                        <input class="input-h" type="number" min="0" required>
+                    </div>
+                    <div>
+                        <button type="submit">Policz</button>
+                        <button type="reset">Reset</button>
+                    </div>
                 </div>
-                <div>
-                    <p>Wysokosc</p>
-                    <input class="input-h">
-                </div>
-            </div>
+            </form>
+
             <div class="figure-type kula">
                 <div>
                     <p>Promień</p>
                     <input class="input-r">
                 </div>
             </div>
+
             <div class="figure-type stozek">
                 <div>
                     <p>Promień</p>
@@ -58,6 +62,7 @@
                     <input class="input-h">
                 </div>
             </div>
+
             <div class="figure-type prostopadloscian">
                 <div>
                     <p>Długość</p>
