@@ -51,7 +51,7 @@
                                     <p>Promień</p>
                                     <input class="input-r" type="number" min="0" required>
                                 </div>
-                                <button class="submit" type="submit">Policz</button>
+                                <button type="submit">Policz</button>
                                 <button type="reset">Reset</button>
                             </div>
                         </div>
@@ -67,29 +67,31 @@
                                 <input class="input-h" type="number" min="0" required>
                             </div>
                             <div>
-                                <button class="submit" type="submit">Policz</button>
+                                <button type="submit">Policz</button>
                                 <button type="reset">Reset</button>
                             </div>
                         </div>
                     </form>
-                    <div class="figure-type prostopadloscian">
-                        <div>
-                            <p>Długość</p>
-                            <input class="input-a" type="number" min="0" required>
+                    <form onsubmit="calculateHandler">
+                        <div class="figure-type prostopadloscian">
+                            <div>
+                                <p>Długość</p>
+                                <input class="input-a" type="number" min="0" required>
+                            </div>
+                            <div>
+                                <p>Szerokość</p>
+                                <input class="input-b" type="number" min="0" required>
+                            </div>
+                            <div>
+                                <p>Wysokość</p>
+                                <input class="input-c" type="number" min="0" required>
+                            </div>
+                            <div>
+                                <button type="submit">Policz</button>
+                                <button type="reset">Reset</button>
+                            </div>
                         </div>
-                        <div>
-                            <p>Szerokość</p>
-                            <input class="input-b" type="number" min="0" required>
-                        </div>
-                        <div>
-                            <p>Wysokość</p>
-                            <input class="input-c" type="number" min="0" required>
-                        </div>
-                        <div>
-                            <button class="submit" type="submit">Policz</button>
-                            <button type="reset">Reset</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <div>
                     <h2>Objętość wybranej figury wynosi:</h2>

@@ -62,7 +62,7 @@ function calculateHandler(event) {
     });
 }
 
-document.querySelector(".submit").addEventListener("click", calculateHandler);
+document.querySelector("button").addEventListener("click", calculateHandler);
 
 const images = document.querySelectorAll('.menu>li>img');
 images.forEach(image => image.addEventListener("click", figureSelectionHandler));
