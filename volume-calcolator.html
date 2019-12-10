@@ -1,92 +1,104 @@
 <!doctype html>
 <html>
-<head>
-    <title>Kalkulator objętości</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="default.css">
-</head>
-<body>
-<header>
-    <h1>KALKULATOR OBJETOSCI</h1>
-</header>
-<div class="content">
-    <h2>Wybierz figurę</h2>
-    <ul class="menu">
-        <li>
-            <img data-figure="walec" src="images/walec.png">
-        </li>
-        <li>
-            <img data-figure="kula" src="images/kula.png">
-        </li>
-        <li>
-            <img data-figure="stozek" src="images/stozek.png">
-        </li>
-        <li>
-            <img data-figure="prostopadloscian" src="images/prostopadloscian.png" title="Prostopadłościan"/>
-        </li>
-    </ul>
-    <div class="calculator">
-        <h2 id="selected-figure"></h2>
-        <div class="selected-figure-data">
-            <form onsubmit="calculateHandler">
-                <div class="figure-type walec">
-                    <div>
-                        <p>Promień</p>
-                        <input class="input-r" type="number" min="0" required>
+    <head>
+        <title>Kalkulator objętości</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="default.css">
+    </head>
+    <body>
+        <header>
+            <h1>KALKULATOR OBJETOSCI</h1>
+        </header>
+        <div class="content">
+            <h2>Wybierz figurę</h2>
+            <ul class="menu">
+                <li>
+                    <img data-figure="walec" src="images/walec.png" title="Walec">
+                </li>
+                <li>
+                    <img data-figure="kula" src="images/kula.png" title="Kula">
+                </li>
+                <li>
+                    <img data-figure="stozek" src="images/stozek.png" title="Stożek">
+                </li>
+                <li>
+                    <img data-figure="prostopadloscian" src="images/prostopadloscian.png" title="Prostopadłościan"/>
+                </li>
+            </ul>
+            <div class="calculator">
+                <h2 id="selected-figure"></h2>
+                <div class="selected-figure-data">
+                    <form onsubmit="calculateHandler">
+                        <div class="figure-type walec">
+                            <div>
+                                <p>Promień</p>
+                                <input class="input-r" type="number" min="0" required>
+                            </div>
+                            <div>
+                                <p>Wysokosc</p>
+                                <input class="input-h" type="number" min="0" required>
+                            </div>
+                            <div>
+                                <button type="submit">Policz</button>
+                                <button type="reset">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form onsubmit="calculateHandler">
+                        <div class="figure-type kula">
+                            <div>
+                                <div>
+                                    <p>Promień</p>
+                                    <input class="input-r" type="number" min="0" required>
+                                </div>
+                                <button class="submit" type="submit">Policz</button>
+                                <button type="reset">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form onsubmit="calculateHandler">
+                        <div class="figure-type stozek">
+                            <div>
+                                <p>Promień</p>
+                                <input class="input-r" type="number" min="0" required>
+                            </div>
+                            <div>
+                                <p>Wysokosc</p>
+                                <input class="input-h" type="number" min="0" required>
+                            </div>
+                            <div>
+                                <button class="submit" type="submit">Policz</button>
+                                <button type="reset">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="figure-type prostopadloscian">
+                        <div>
+                            <p>Długość</p>
+                            <input class="input-a" type="number" min="0" required>
+                        </div>
+                        <div>
+                            <p>Szerokość</p>
+                            <input class="input-b" type="number" min="0" required>
+                        </div>
+                        <div>
+                            <p>Wysokość</p>
+                            <input class="input-c" type="number" min="0" required>
+                        </div>
+                        <div>
+                            <button class="submit" type="submit">Policz</button>
+                            <button type="reset">Reset</button>
+                        </div>
                     </div>
-                    <div>
-                        <p>Wysokosc</p>
-                        <input class="input-h" type="number" min="0" required>
-                    </div>
-                    <div>
-                        <button type="submit">Policz</button>
-                        <button type="reset">Reset</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="figure-type kula">
-                <div>
-                    <p>Promień</p>
-                    <input class="input-r">
-                </div>
-            </div>
-
-            <div class="figure-type stozek">
-                <div>
-                    <p>Promień</p>
-                    <input class="input-r">
                 </div>
                 <div>
-                    <p>Wysokosc</p>
-                    <input class="input-h">
-                </div>
-            </div>
-
-            <div class="figure-type prostopadloscian">
-                <div>
-                    <p>Długość</p>
-                    <input class="input-a">
-                </div>
-                <div>
-                    <p>Szerokość</p>
-                    <input class="input-b">
-                </div>
-                <div>
-                    <p>Wysokość</p>
-                    <input class="input-c">
+                    <h2>Objętość wybranej figury wynosi:</h2>
+                    <p id="selected-figure-input"></p>
+                    <p id="selected-figure-field"></p>
                 </div>
             </div>
         </div>
-        <button id="calc">Policz</button>
-        <div>
-            <h2>Objętość wybranej figury wynosi:</h2>
-            <p id="selected-figure-input"></p>
-            <p id="selected-figure-field"></p>
-        </div>
-    </div>
-</div>
-<footer></footer>
-<script type="text/javascript" src="Main.js"></script>
-</body>
+        <footer></footer>
+        <script type="text/javascript" src="Main.js"></script>
+    </body>
 </html>
