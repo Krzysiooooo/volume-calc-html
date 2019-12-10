@@ -28,8 +28,8 @@
             <div class="calculator">
                 <h2 id="selected-figure"></h2>
                 <div class="selected-figure-data">
-                    <form onsubmit="calculateHandler">
-                        <div class="figure-type walec">
+                    <form class="figure-type walec">
+                        <div>
                             <div>
                                 <p>Promień</p>
                                 <input class="input-r" type="number" min="0" required>
@@ -44,8 +44,8 @@
                             </div>
                         </div>
                     </form>
-                    <form onsubmit="calculateHandler">
-                        <div class="figure-type kula">
+                    <form class="figure-type kula">
+                        <div>
                             <div>
                                 <div>
                                     <p>Promień</p>
@@ -56,8 +56,8 @@
                             </div>
                         </div>
                     </form>
-                    <form onsubmit="calculateHandler">
-                        <div class="figure-type stozek">
+                    <form class="figure-type stozek" >
+                        <div>
                             <div>
                                 <p>Promień</p>
                                 <input class="input-r" type="number" min="0" required>
@@ -72,8 +72,8 @@
                             </div>
                         </div>
                     </form>
-                    <form onsubmit="calculateHandler">
-                        <div class="figure-type prostopadloscian">
+                    <form class="figure-type prostopadloscian">
+                        <div>
                             <div>
                                 <p>Długość</p>
                                 <input class="input-a" type="number" min="0" required>
@@ -93,7 +93,7 @@
                         </div>
                     </form>
                 </div>
-                <div>
+                <div class = "calculation-result">
                     <h2>Objętość wybranej figury wynosi:</h2>
                     <p id="selected-figure-input"></p>
                     <p id="selected-figure-field"></p>

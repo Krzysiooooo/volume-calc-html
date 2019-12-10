@@ -39,6 +39,7 @@ function figureSelectionHandler(event) {
         item.hidden = true
     });
     document.querySelector("." + activeFigure.name).hidden = false;
+    document.querySelector(".calculation-result").hidden = true;
 }
 
 function calculateHandler(event) {
@@ -60,9 +61,12 @@ function calculateHandler(event) {
     inputs.forEach((param) => {
         document.querySelector("." + activeFigure.name + " .input-" + param).value = '';
     });
+    document.querySelector(".calculation-result").hidden = false;
 }
-
-document.querySelector("button").addEventListener("click", calculateHandler);
 
 const images = document.querySelectorAll('.menu>li>img');
 images.forEach(image => image.addEventListener("click", figureSelectionHandler));
+
+[".figure-type.prostopadloscian",".figure-type.kula",".figure-type.walec",".figure-type.stozek"].forEach(selector=>{
+      document.querySelector(selector).onsubmit = calculateHandler;
+});
