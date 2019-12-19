@@ -56,7 +56,7 @@ function calculateHandler(event) {
     activeFigure.field = formulaFn(data);
     const dataKeys = Object.keys(data);
     const listItems = dataKeys.map(key => `<li>${key} = ${data[key]}</li>`);
-    document.querySelector("#selected-figure-input").innerHTML = `Wprowadzone wymiary:<ul>${listItems.join(" ")}</ul>`;
+    document.querySelector("#selected-figure-input").innerHTML = `<ul>${listItems.join(" ")}</ul>`;
     document.querySelector("#selected-figure-field").innerText = activeFigure.field;
     inputs.forEach((param) => {
         document.querySelector("." + activeFigure.name + " .input-" + param).value = '';
