@@ -3,105 +3,116 @@
     <head>
         <title>Kalkulator objętości</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              crossorigin="anonymous">
         <link rel="stylesheet" href="default.css">
     </head>
     <body>
-        <header>
-            <h1>KALKULATOR OBJETOSCI</h1>
-        </header>
-        <div class="content">
-            <h2 id = "select-figure">Wybierz figurę</h2>
-            <ul class="menu">
-                <li>
-                    <img data-figure="walec" src="images/walec.png" title="Walec">
-                </li>
-                <li>
-                    <img data-figure="kula" src="images/kula.png" title="Kula">
-                </li>
-                <li>
-                    <img data-figure="stozek" src="images/stozek.png" title="Stożek">
-                </li>
-                <li>
-                    <img data-figure="prostopadloscian" src="images/prostopadloscian.png" title="Prostopadłościan"/>
-                </li>
-            </ul>
-            <div class="calculator">
-                <h2 id="selected-figure"></h2>
-                <div class="selected-figure-data">
-                    <form class="figure-type walec">
-                        <div>
+        <div class="container">
+            <header>
+                <h1>KALKULATOR OBJETOSCI</h1>
+            </header>
+            <div class="content">
+                <h2 id="select-figure">Wybierz figurę</h2>
+                <ul class="menu">
+                    <li>
+                        <img data-figure="walec" src="images/walec.png" title="Walec">
+                    </li>
+                    <li>
+                        <img data-figure="kula" src="images/kula.png" title="Kula">
+                    </li>
+                    <li>
+                        <img data-figure="stozek" src="images/stozek.png" title="Stożek">
+                    </li>
+                    <li>
+                        <img data-figure="prostopadloscian" src="images/prostopadloscian.png" title="Prostopadłościan"/>
+                    </li>
+                </ul>
+                <div class="calculator">
+                    <h2 id="selected-figure"></h2>
+                    <div class="selected-figure-data">
+                        <form class="figure-type walec">
                             <div>
-                                <p>Promień</p>
-                                <input class="input-r" type="number" min="0" required>
-                            </div>
-                            <div>
-                                <p>Wysokosc</p>
-                                <input class="input-h" type="number" min="0" required>
-                            </div>
-                            <div>
-                                <button type="submit">Policz</button>
-                                <button type="reset">Reset</button>
-                            </div>
-                        </div>
-                    </form>
-                    <form class="figure-type kula">
-                        <div>
-                            <div>
-                                <div>
+                                <div class="form-group">
                                     <p>Promień</p>
-                                    <input class="input-r" type="number" min="0" required>
+                                    <input class="input-r form-control" type="number" min="0" required>
                                 </div>
-                                <button type="submit">Policz</button>
-                                <button type="reset">Reset</button>
+                                <div class="form-group">
+                                    <p>Wysokosc</p>
+                                    <input class="input-h form-control" type="number" min="0" required>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Policz</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                    <form class="figure-type stozek" >
-                        <div>
+                        </form>
+                        <form class="figure-type kula">
                             <div>
-                                <p>Promień</p>
-                                <input class="input-r" type="number" min="0" required>
+                                <div class="form-group">
+                                    <p>Promień</p>
+                                    <input class="input-r form-control"  type="number" min="0" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Policz</button>
+                                <button type="reset" class="btn btn-secondary">Reset</button>
                             </div>
+                        </form>
+                        <form class="figure-type stozek">
+                                <div class="form-group">
+                                    <p>Promień</p>
+                                    <input class="input-r form-control" type="number" min="0" required>
+                                </div>
+                                <div class="form-group">
+                                    <p>Wysokosc</p>
+                                    <input class="input-h form-control" type="number" min="0" required>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Policz</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                </div>
+                        </form>
+                        <form class="figure-type prostopadloscian">
                             <div>
-                                <p>Wysokosc</p>
-                                <input class="input-h" type="number" min="0" required>
+                                <div class="form-group">
+                                    <p>Długość</p>
+                                    <input class="input-a form-control" type="number" min="0" required>
+                                </div>
+                                <div class="form-group">
+                                    <p>Szerokość</p>
+                                    <input class="input-b form-control" type="number" min="0" required>
+                                </div>
+                                <div class="form-group">
+                                    <p>Wysokość</p>
+                                    <input class="input-c form-control" type="number" min="0" required>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Policz</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                </div>
                             </div>
-                            <div>
-                                <button type="submit">Policz</button>
-                                <button type="reset">Reset</button>
-                            </div>
-                        </div>
-                    </form>
-                    <form class="figure-type prostopadloscian">
-                        <div>
-                            <div>
-                                <p>Długość</p>
-                                <input class="input-a" type="number" min="0" required>
-                            </div>
-                            <div>
-                                <p>Szerokość</p>
-                                <input class="input-b" type="number" min="0" required>
-                            </div>
-                            <div>
-                                <p>Wysokość</p>
-                                <input class="input-c" type="number" min="0" required>
-                            </div>
-                            <div>
-                                <button type="submit">Policz</button>
-                                <button type="reset">Reset</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class = "calculation-result">
-                    <h2>Wprowadzone wymiary:</h2>
-                    <p id="selected-figure-input"></p>
-                    <h2>Objętość wynosi:</h2>
-                    <p id="selected-figure-field"></p>
+                        </form>
+                    </div>
+                    <div class="calculation-result">
+                        <h2>Wprowadzone wymiary:</h2>
+                        <p id="selected-figure-input"></p>
+                        <h2>Objętość wynosi:</h2>
+                        <p id="selected-figure-field"></p>
+                    </div>
                 </div>
             </div>
+            <footer></footer>
         </div>
-        <footer></footer>
         <script type="text/javascript" src="Main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
     </body>
 </html>
